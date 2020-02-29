@@ -3,9 +3,11 @@ package cn.xanderye.entity;
 public class Friend {
     private String name;
 
-    private String appName;
+    private String model;
 
-    private String type;
+    private String banner;
+
+    private String distance;
 
     public String getName() {
         return name;
@@ -15,19 +17,27 @@ public class Friend {
         this.name = name;
     }
 
-    public String getAppName() {
-        return appName;
+    public String getModel() {
+        return model;
     }
 
-    public void setAppName(String appName) {
-        this.appName = appName;
+    public void setModel(String model) {
+        this.model = model;
     }
 
-    public String getType() {
-        return type;
+    public String getBanner() {
+        return banner;
     }
 
-    public void setType(String type) {
-        this.type = type;
+    public void setBanner(String banner) {
+        this.banner = banner;
+    }
+
+    public String getDistance() {
+        return distance;
+    }
+
+    public void setDistance(String distance) {
+        this.distance = distance;
     }
 }
