@@ -108,7 +108,7 @@ public class Main {
         System.out.println();
         System.out.println("总共统计了" + total + "台");
         System.out.println();
-        System.out.println("-------------------统计结束-------------------");
+        System.out.println("-------------------统计结束by@XanderYe-------------------");
         System.out.println();
     }
 
