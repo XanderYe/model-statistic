@@ -24,6 +24,7 @@ public class Main {
         if (StringUtils.isEmpty(qq) || StringUtils.isEmpty(skey)) {
             System.out.println("cookie错误！");
         }
+        System.out.println();
         Map<String, List<Friend>> friendList = getModelData(qq, skey);
         statistic(friendList);
         System.out.print("请输机型入查询用户：");
@@ -69,6 +70,9 @@ public class Main {
      * @date 2020-02-29
      */
     public static void statistic(Map<String, List<Friend>> friendList) {
+        System.out.println();
+        System.out.println("-------------------统计开始-------------------");
+        System.out.println();
         List<Map.Entry<String, List<Friend>>> list = new ArrayList<>(friendList.entrySet());
         list.stream().sorted((s1, s2) -> {
             Integer length1 = s1.getValue().size();
@@ -81,6 +85,9 @@ public class Main {
             List<String> modelList = value.stream().map(Friend::getAppName).collect(Collectors.toList());
             System.out.println(modelList.toString());
         });
+        System.out.println();
+        System.out.println("-------------------统计结束-------------------");
+        System.out.println();
     }
 
     /**
