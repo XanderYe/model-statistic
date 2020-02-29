@@ -27,7 +27,7 @@ public class Main {
         System.out.println();
         Map<String, List<Friend>> friendList = getModelData(qq, skey);
         statistic(friendList);
-        System.out.print("请输机型入查询用户：");
+        System.out.print("请输入机型查询用户：");
         while (scanner.hasNext()) {
             String model = scanner.nextLine();
             if (StringUtils.isNotEmpty(model)) {
@@ -35,7 +35,7 @@ public class Main {
             } else {
                 System.out.println("输入错误");
             }
-            System.out.print("请输机型入查询用户：");
+            System.out.print("请输入机型查询用户：");
         }
     }
 
