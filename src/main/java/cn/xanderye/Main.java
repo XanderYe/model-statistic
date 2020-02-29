@@ -8,6 +8,7 @@ import com.alibaba.fastjson.JSONObject;
 import org.apache.commons.lang3.StringUtils;
 
 import java.util.*;
+import java.util.concurrent.atomic.AtomicInteger;
 import java.util.stream.Collectors;
 
 public class Main {
@@ -70,6 +71,7 @@ public class Main {
      * @date 2020-02-29
      */
     public static void statistic(Map<String, List<Friend>> friendList) {
+        AtomicInteger total = new AtomicInteger();
         System.out.println();
         System.out.println("-------------------统计开始-------------------");
         System.out.println();
@@ -83,8 +85,11 @@ public class Main {
             List<Friend> value = entry.getValue();
             System.out.println(key + ": " + value.size());
             List<String> modelList = value.stream().map(Friend::getAppName).collect(Collectors.toList());
+            total.addAndGet(modelList.size());
             System.out.println(modelList.toString());
         });
+        System.out.println();
+        System.out.println("总共统计了" + total + "台");
         System.out.println();
         System.out.println("-------------------统计结束-------------------");
         System.out.println();
